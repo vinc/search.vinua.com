@@ -1,2 +1,17 @@
-@import 'bootstrap/scss/bootstrap';
-@import 'bootstrap-icons/font/bootstrap-icons';
+$primary: #93C;
+
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons";
+
+.container {
+  max-width: 45rem;
+}
+
+.input-group input:focus {
+  box-shadow: inherit;
+}
+
+.btn-outline-primary:active,
+.btn-outline-primary:hover {
+  border-color: $primary !important;
+}

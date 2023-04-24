@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100" data-bs-theme="dark">
   <head>
-    <title>Search</title>
+    <title><%= @title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,7 +10,7 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
+  <body class="h-100">
     <%= yield %>
   </body>
 </html>
