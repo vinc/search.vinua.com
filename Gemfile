@@ -69,3 +69,5 @@ end
 
 
 gem "dotenv", "~> 2.8"
+
+gem "http_accept_language", "~> 2.1"

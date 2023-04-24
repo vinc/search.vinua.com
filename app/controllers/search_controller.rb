@@ -15,7 +15,7 @@ class SearchController < ApplicationController
     end
 
     @title = [@query, "Search"].compact.join(" - ")
-    @results = Query.new(@query).search
+    @results = Query.new(@query, language: prefered_languages.first).search
 
     if bang.name == "!"
       res = @results.first
@@ -24,6 +24,10 @@ class SearchController < ApplicationController
   end
 
   private
+
+  def prefered_languages
+    http_accept_language.user_preferred_languages.select { |lang| lang["-"] }
+  end
 
   def search_params
     params.permit(:q)
