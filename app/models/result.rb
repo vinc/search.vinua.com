@@ -6,7 +6,7 @@ class Result
   attr_accessor :url, :date, :name, :body
 
   def initialize(data)
-    @date = Time.parse(data["dateLastCrawled"]) if data["dateLastCrawled"]
+    @date = data["dateLastCrawled"]&.to_time
     @name = data["name"]
     @body = data["snippet"]
     @url = data["url"]
