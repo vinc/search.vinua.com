@@ -2,7 +2,7 @@
 
 class PagesController < ApplicationController
   def home
-    expires_in 5.minutes, public: true
+    #expires_in 5.minutes, public: true
 
     @title = "Search"
   end

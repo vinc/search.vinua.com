@@ -33,5 +33,8 @@ module Search
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.i18n.available_locales = %w[ar en es fr hi ja ko zh]
+    config.i18n.fallbacks = %w[en]
   end
 end
