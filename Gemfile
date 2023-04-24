@@ -54,6 +54,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "dotenv", "~> 2.8"
 end
 
 group :development do
@@ -67,7 +68,7 @@ group :development do
   # gem "spring"
 end
 
-
-gem "dotenv", "~> 2.8"
-
+gem "devise"
+gem "devise-i18n"
+gem "devise-bootstrap5"
 gem "http_accept_language", "~> 2.1"
