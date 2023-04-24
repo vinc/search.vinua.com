@@ -14,10 +14,9 @@ class Query
       key = ENV["BING_KEY"]
       uri  = "https://api.bing.microsoft.com"
       path = "/v7.0/search"
-      uri = URI(uri + path + "?q=" + URI.encode_www_form_component(@query) + "&cc=US")
+      uri = URI(uri + path + "?q=" + URI.encode_www_form_component(@query) + "&mkt=en-US&count=50")
       request = Net::HTTP::Get.new(uri)
       request["Ocp-Apim-Subscription-Key"] = key
-      request["Accept-Language"] = "en_US"
       response = Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
         http.request(request)
       end
