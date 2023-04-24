@@ -7,7 +7,10 @@ class Bang
     {
       "!" => nil,
       "!g" => "https://www.google.com/search?q=%s",
-      "!w" => "https://en.wikipedia.org/wiki/Special:Search?search=%s"
+      "!w" => "https://en.wikipedia.org/wiki/Special:Search?search=%s",
+      "!gi" => "https://google.com/search?tbm=isch&tbs=imgo:1&q=%s",
+      "!so" => "https://stackoverflow.com/search?q=%s",
+      "!yt" => "https://www.youtube.com/results?search_query=%s",
     }.freeze
   end
 
