@@ -1,0 +1,26 @@
+<span class="float-end">
+  <%= link_to "Logout", destroy_user_session_path, class: "btn btn-outline-primary", data: { turbo_method: :delete } %>
+</span>
+<h1 class="text-primary"><%= t("settings") %></h1>
+
+<div class="row mt-4 align-items-center">
+  <div class="col">
+    <h3 class="text-primary"><%= t("usage") %></h3>
+  </div>
+  <div class="col text-end">
+    <%= current_user.queries_count %> / <%= current_user.queries_max %>
+    <%= t("queries") %>
+  </div>
+</div>
+<div class="progress" role="progressbar">
+  <div class="progress-bar" style="width: <%= current_user.queries_usage %>%"></div>
+</div>
+
+<div class="mt-4">
+  <h3 class="text-primary"><%= t("blocked_domains") %></h3>
+  <ul>
+    <% current_user.blocked_domains.each do |domain| %>
+      <li><%= domain %></li>
+    <% end %>
+  </ul>
+</div>

@@ -72,3 +72,5 @@ gem "devise"
 gem "devise-i18n"
 gem "devise-bootstrap5"
 gem "http_accept_language", "~> 2.1"
+
+gem "faker", "~> 3.2"

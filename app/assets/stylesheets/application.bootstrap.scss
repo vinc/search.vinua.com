@@ -15,3 +15,10 @@ $color-mode-type: media-query;
 .btn-outline-primary:hover {
   border-color: $primary !important;
 }
+
+.card.blocked {
+  opacity: 50%;
+  .card-body {
+    display: none;
+  }
+}
