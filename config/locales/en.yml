@@ -1,6 +1,11 @@
 en:
   search: "Search"
   query_placeholder: "Search the web"
+  settings: "Settings"
+  usage: "Usage"
+  queries: "Queries"
+  blocked_domains: "Blocked Domains"
+  logout: "Logout"
 
   datetime:
     distance_in_words:

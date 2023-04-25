@@ -1,3 +1,8 @@
 es:
   search: "Buscar"
   query_placeholder: "Buscar en la web"
+  settings: "Configuración"
+  usage: "Uso"
+  queries: "Consultas"
+  blocked_domains: "Dominios Bloqueados"
+  logout: "Cerrar sesión"

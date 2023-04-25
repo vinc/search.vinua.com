@@ -1,3 +1,8 @@
 ja:
   search: "検索"
-  query_placeholder: "ウェブを検索する"
+  query_placeholder: "ウェブを検索"
+  settings: "設定"
+  usage: "使用法"
+  queries: "クエリ"
+  blocked_domains: "ブロックされたドメイン"
+  logout: "ログアウト"

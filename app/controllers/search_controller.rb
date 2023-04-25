@@ -13,7 +13,6 @@ class SearchController < ApplicationController
       return redirect_to(bang.url, allow_other_host: true)
     end
     current_user.increment!(:queries_count)
-    @title = [@query, "Search"].compact.join(" - ")
     @results = Query.new(@query, language: prefered_languages.first).search
     if bang.name == "!"
       res = @results.first

@@ -1,3 +1,8 @@
 zh:
   search: "搜索"
-  query_placeholder: "搜索互联网"
+  query_placeholder: "搜索网络"
+  settings: "设置"
+  usage: "使用"
+  queries: "查询"
+  blocked_domains: "已屏蔽域名"
+  logout: "退出登录"

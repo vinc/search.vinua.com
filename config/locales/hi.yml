@@ -1,3 +1,8 @@
 hi:
   search: "खोजें"
   query_placeholder: "वेब खोजें"
+  settings: "सेटिंग्स"
+  usage: "उपयोग"
+  queries: "क्वेरी"
+  blocked_domains: "अवरुद्ध डोमेन"
+  logout: "लॉग आउट"

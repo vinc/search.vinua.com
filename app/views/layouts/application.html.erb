@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="h-100">
   <head>
-    <title><%= @title %></title>
+    <%= display_meta_tags site: t("search"), separator: "-", reverse: true %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>

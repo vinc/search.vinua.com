@@ -1,3 +1,8 @@
 fr:
-  search: "Recherche"
+  search: "Rechercher"
   query_placeholder: "Rechercher sur le web"
+  settings: "Paramètres"
+  usage: "Utilisation"
+  queries: "Requêtes"
+  blocked_domains: "Domaines bloqués"
+  logout: "Déconnexion"

@@ -1,4 +1,4 @@
-<h1 class="text-primary"><%= t("settings") %></h1>
+<h1 class="text-primary"><%= title t("settings") %></h1>
 
 <div class="row mt-4 align-items-center">
   <div class="col">
@@ -23,5 +23,5 @@
 </div>
 
 <span class="d-grid mt-5">
-  <%= link_to "Logout", destroy_user_session_path, class: "btn btn-outline-primary", data: { turbo_method: :delete } %>
+  <%= link_to t("logout"), destroy_user_session_path, class: "btn btn-outline-primary", data: { turbo_method: :delete } %>
 </span>

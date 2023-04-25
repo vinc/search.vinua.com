@@ -1,3 +1,8 @@
 ko:
   search: "검색"
-  query_placeholder: "인터넷 검색"
+  query_placeholder: "웹 검색"
+  settings: "설정"
+  usage: "사용량"
+  queries: "검색어"
+  blocked_domains: "차단된 도메인"
+  logout: "로그아웃"

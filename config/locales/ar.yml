@@ -1,3 +1,8 @@
 ar:
-  search: "بحث"
-  query_placeholder: "ابحث في الويب"
+  search: "البحث"
+  query_placeholder: "ابحث عن ما تريد"
+  settings: "الإعدادات"
+  usage: "الاستخدام"
+  queries: "الاستعلامات"
+  blocked_domains: "النطاقات المحظورة"
+  logout: "تسجيل الخروج"
