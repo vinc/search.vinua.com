@@ -12,7 +12,7 @@ class Query
   def search
     return [] unless @query.present?
 
-    return Result.sample(10) if @query == "test"
+    return Result.sample(10) if ["lorem", "lorem ipsum"].include?(@query.downcase)
 
     Rails.cache.fetch("search/#{@language}/#{@query}/#{@limit}", expires_in: 1.hour) do
       key = ENV["BING_KEY"]

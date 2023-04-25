@@ -21,12 +21,12 @@ class Result
   end
 
   def self.sample(n)
-    n.times.map do
+    n.times.map do |i|
       Result.new({
         "dateLastCrawled" => Faker::Time.between(from: 2.years.ago, to: DateTime.now).to_s,
         "name" => Faker::Lorem.words(number: 5).join(" ").capitalize,
         "snippet" => Faker::Lorem.words(number: 40).join(" ").capitalize + "...",
-        "url" => Faker::Internet.url,
+        "url" => (i == rand(0..n) ? "https://example.com" : Faker::Internet.url),
       })
     end
   end
