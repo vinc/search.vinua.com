@@ -7,6 +7,7 @@ class Bang
     {
       "!" => nil,
       "!g" => "https://www.google.com/search?q=%s",
+      "!m" => "https://www.google.com/maps/search/%s",
       "!w" => "https://en.wikipedia.org/wiki/Special:Search?search=%s",
       "!gh" => "https://github.com/search?q=%s",
       "!gi" => "https://google.com/search?tbm=isch&tbs=imgo:1&q=%s",
