@@ -1,8 +1,0 @@
-bn:
-  search: "অনুসন্ধান"
-  query_placeholder: "ওয়েব অনুসন্ধান করুন"
-  settings: "সেটিংস"
-  usage: "ব্যবহার"
-  queries: "কুয়েরিস"
-  blocked_domains: "ব্লক করা ডোমেইনগুলি"
-  logout: "লগআউট"
