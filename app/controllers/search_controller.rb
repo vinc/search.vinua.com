@@ -14,7 +14,7 @@ class SearchController < ApplicationController
     end
     current_user.increment!(:queries_count)
     @results = Query.new(@query, language: prefered_languages.first).search
-    if bang.name == "!"
+    if bang.name == "!" && @results.present?
       res = @results.first
       return redirect_to(res.url, allow_other_host: true) if res
     end

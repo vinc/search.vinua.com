@@ -6,6 +6,7 @@ en:
   queries: "Queries"
   blocked_domains: "Blocked Domains"
   logout: "Logout"
+  no_results: "No results"
 
   datetime:
     distance_in_words:

@@ -10,7 +10,7 @@ class Query
   end
 
   def search
-    return [] unless @query.present?
+    return unless @query.present?
 
     return Result.sample(10) if ["lorem", "lorem ipsum"].include?(@query.downcase)
 
@@ -30,7 +30,7 @@ class Query
         http.request(request)
       end
       json = JSON.parse(response.body)
-      json["webPages"]["value"]
-    end.map { |data| Result.new(data) }
+      json.dig("webPages", "value")
+    end&.map { |data| Result.new(data) }
   end
 end

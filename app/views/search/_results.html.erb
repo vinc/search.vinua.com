@@ -1,33 +1,37 @@
 <div id="results" class="mb-4">
-  <% @results.each do |res| %>
-    <article class="card mt-4 shadow-sm <%= "blocked" if res.blocked_by?(current_user) %>" itemscope itemtype="http://schema.org/Article">
-      <div class="card-header">
-        <div class="row text-muted">
-          <div class="col col-auto" itemprop="publisher" itemtype="https://schema.org/Organization" itemscope="itemscope">
-            <span itemprop="name">
-              <% if res.blocked_by?(current_user) %>
-                <%= link_to res.domain, allow_settings_path("domain" => res.domain), class: "text-decoration-none text-muted", data: { turbo_method: :put } %>
-              <% else %>
-                <%= link_to res.domain, block_settings_path("domain" => res.domain), class: "text-decoration-none text-muted", data: { turbo_method: :put } %>
-              <% end %>
-            </span>
-          </div>
-          <div class="col text-end text-muted">
-            <%= time_ago(res.date) %>
+  <% if @results.present? %>
+    <% @results.each do |res| %>
+      <article class="card mt-4 shadow-sm <%= "blocked" if res.blocked_by?(current_user) %>" itemscope itemtype="http://schema.org/Article">
+        <div class="card-header">
+          <div class="row text-muted">
+            <div class="col col-auto" itemprop="publisher" itemtype="https://schema.org/Organization" itemscope="itemscope">
+              <span itemprop="name">
+                <% if res.blocked_by?(current_user) %>
+                  <%= link_to res.domain, allow_settings_path("domain" => res.domain), class: "text-decoration-none text-muted", data: { turbo_method: :put } %>
+                <% else %>
+                  <%= link_to res.domain, block_settings_path("domain" => res.domain), class: "text-decoration-none text-muted", data: { turbo_method: :put } %>
+                <% end %>
+              </span>
+            </div>
+            <div class="col text-end text-muted">
+              <%= time_ago(res.date) %>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="card-body pb-0">
-        <h1 class="card-title h5">
-          <a href="<%= res.url %>" class="text-decoration-none">
-            <%= res.name %>
-          </a>
-        </h1>
-        <div class="card-text" itemprop="headline">
-          <p><%= res.body %></p>
+        <div class="card-body pb-0">
+          <h1 class="card-title h5">
+            <a href="<%= res.url %>" class="text-decoration-none">
+              <%= res.name %>
+            </a>
+          </h1>
+          <div class="card-text" itemprop="headline">
+            <p><%= res.body %></p>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    <% end %>
+  <% else %>
+    <p><%= t("no_results") %></p>
   <% end %>
 </div>
 
