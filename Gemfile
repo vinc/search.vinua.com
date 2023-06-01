@@ -75,3 +75,5 @@ gem "http_accept_language", "~> 2.1"
 gem "meta-tags"
 
 gem "faker", "~> 3.2"
+
+gem "addressable", "~> 2.8"

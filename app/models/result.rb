@@ -13,7 +13,7 @@ class Result
   end
 
   def domain
-    @domain ||= URI.parse(@url).host
+    @domain ||= Addressable::URI.parse(@url).host
   end
 
   def blocked_by?(user)
