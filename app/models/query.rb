@@ -3,9 +3,9 @@
 require "net/http"
 
 class Query
-  def initialize(query, language: "en-US")
+  def initialize(query, language: nil)
     @query = query
-    @language = language
+    @language = language || "en-US"
   end
 
   def search
@@ -45,7 +45,7 @@ class Query
   def search_brave
       key = ENV["BRAVE_KEY"]
       uri = "https://api.search.brave.com/res/v1/web/search"
-      lang, country = @language.split("-")
+      lang, country = @language&.split("-")
       params = {
         q: @query,
         lang: lang,
