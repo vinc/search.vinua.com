@@ -13,6 +13,7 @@ class Bang
       "!gi" => "https://google.com/search?tbm=isch&tbs=imgo:1&q=%s",
       "!so" => "https://stackoverflow.com/search?q=%s",
       "!yt" => "https://www.youtube.com/results?search_query=%s",
+      "!wa" => "https://www.wolframalpha.com/input/?i=%s",
       "!gems" => "https://rubygems.org/search?query=%s",
       "!crates" => "https://crates.io/search?q=%s",
     }.freeze
