@@ -6,9 +6,9 @@ class Result
   attr_accessor :url, :date, :name, :body
 
   def initialize(data)
-    @date = data["dateLastCrawled"]&.to_time
+    @date = data["date"]&.to_time
     @name = data["name"]
-    @body = data["snippet"]
+    @body = data["body"]
     @url = data["url"]
   end
 
