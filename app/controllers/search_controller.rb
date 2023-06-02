@@ -4,6 +4,10 @@ class SearchController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    if current_user.queries_count >= current_user.queries_max
+      return redirect_to(settings_path, alert: "You have reached the maximum number of queries allowed.")
+    end
+
     expires_in 5.minutes, public: true
     @query = search_params[:q].presence
     return redirect_to(root_path) if @query.blank?
