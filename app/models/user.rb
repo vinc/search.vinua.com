@@ -7,8 +7,4 @@ class User < ApplicationRecord
   def queries_usage
     (100.0 * queries_count / queries_max).to_i
   end
-
-  def queries_max
-    50
-  end
 end
