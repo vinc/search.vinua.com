@@ -10,6 +10,8 @@ class SearchController < ApplicationController
 
     expires_in 5.minutes, public: true
     @query = search_params[:q].presence
+    language = prefered_languages.first || "en-US"
+    backend = search_params[:backend] || "brave"
     return redirect_to(root_path) if @query.blank?
 
     bang = Bang.new(@query)
@@ -17,7 +19,7 @@ class SearchController < ApplicationController
       return redirect_to(bang.url, allow_other_host: true)
     end
     current_user.increment!(:queries_count)
-    @results = Query.new(@query, language: prefered_languages.first).search
+    @results = Query.new(@query, language: language, backend: backend).search
     if bang.name == "!" && @results.present?
       res = @results.first
       return redirect_to(res.url, allow_other_host: true) if res
@@ -31,6 +33,6 @@ class SearchController < ApplicationController
   end
 
   def search_params
-    params.permit(:q)
+    params.permit(:q, :backend)
   end
 end

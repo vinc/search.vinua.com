@@ -3,9 +3,10 @@
 require "net/http"
 
 class Query
-  def initialize(query, language: nil)
+  def initialize(query, language: "en-US", backend: "brave")
     @query = query
-    @language = language || "en-US"
+    @language = language
+    @backend = backend
   end
 
   def search
@@ -13,8 +14,13 @@ class Query
 
     return Result.sample(10) if ["lorem", "lorem ipsum"].include?(@query.downcase)
 
-    Rails.cache.fetch("search/#{@language}/#{@query}", expires_in: 3.seconds) do
-      search_brave
+    Rails.cache.fetch("search/#{@backend}/#{@language}/#{@query}", expires_in: 3.seconds) do
+      case @backend
+      when "bing"
+        search_bing
+      when "brave"
+        search_brave
+      end
     end
   end
 
