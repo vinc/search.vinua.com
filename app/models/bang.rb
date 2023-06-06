@@ -26,7 +26,7 @@ class Bang
     Bang.all.each do |name, url|
       if words.delete(name)
         @name = name
-        @url = url.sub("%s", URI.encode_www_form_component(words.join(" ")))
+        @url = url&.sub("%s", URI.encode_www_form_component(words.join(" ")))
         break
       end
     end
