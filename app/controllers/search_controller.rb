@@ -11,7 +11,7 @@ class SearchController < ApplicationController
     expires_in 5.minutes, public: true
     @query = search_params[:q].presence
     language = prefered_languages.first || "en-US"
-    backend = search_params[:backend] || "brave"
+    backend = search_params[:backend] || "bing"
     return redirect_to(root_path) if @query.blank?
 
     bang = Bang.new(@query)
