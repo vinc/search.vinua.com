@@ -1,0 +1,8 @@
+{
+  "cron": [
+    {
+      "command": "rails queries:reset",
+      "schedule": "@monthly"
+    }
+  ]
+}
