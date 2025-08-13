@@ -3,7 +3,7 @@
 require "net/http"
 
 class Query
-  def initialize(query, language: "en-US", backend: "bing")
+  def initialize(query, language: "en-US", backend: "brave")
     @query = query
     @language = language
     @backend = backend
